@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HomePage() {
   const games = [
     {
@@ -18,8 +20,15 @@ export default function HomePage() {
     <main className="min-h-screen bg-black text-white">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="text-xl font-semibold uppercase tracking-[0.2em]">
-            Nyxa Game Studio
+          <div className="flex items-center gap-3">
+            <Image
+              src="/nyxa-logo.png"
+              alt="Nyxa Game Studio logo"
+              width={140}
+              height={60}
+              priority
+              className="h-auto w-[120px] md:w-[140px]"
+            />
           </div>
 
           <nav className="hidden gap-8 text-sm text-white/70 md:flex">
